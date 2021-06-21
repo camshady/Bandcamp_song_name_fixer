@@ -1,6 +1,6 @@
 # Bandcamp song title fixer
 # Removes annoying artist and album labels from song name. 
-
+# Cameron McDrury 2020
 
 import os
 
@@ -24,12 +24,30 @@ album = input("Album name: ")
 artist = make_caps(artist)
 album = make_caps(album)
 
-path = "D:\Documents\Passion Projects\Bandcamp Title Fixer\Test Album" # For testing only
+path = "\Test Album" # For testing only EDIT THIS TO WORK ON YOUR MACHINE
 
-#path = "D:\Music\\" + artist + "\\" + album
+#path = "D:\Music\\" + artist + "\\" + album   # Actual Path
 
 #List all the songs in the album
-
 songs = os.listdir(path)
 
+#Turn file names into song names
+for song in songs:
+    old = song;
+    words = old.split()
+    
+    #Only look at songs, not cover art. 
+    if "-" in words: 
+        stop = words.index("-") + words.count("-") + 1
+        new = words[stop:len(words)]
+        new = ' '.join(new)
+        
+        old_name = path + "\\" + old
+        new_name = path + "\\" + new
+        
+        print(old_name)
+        print(new_name)
+        print("++++++++++++")
+        
+        os.rename(old_name, new_name)
 
