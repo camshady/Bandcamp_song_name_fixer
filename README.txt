@@ -8,4 +8,6 @@ Enter library path, artist and album.
 The program will exit. 
 It has either renamed all the files or they were not following the correct format. 
 
+
 The correct format is (eg for mp3): Artist - Album - 01 Song.mp3
+
