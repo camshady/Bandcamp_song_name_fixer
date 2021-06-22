@@ -17,6 +17,7 @@ def make_caps(name):
     
 
 #get album path;
+path = input("Where is your music library? (C:\Music) ")
 artist = input("Artist name: ") 
 album = input("Album name: ")
 
@@ -24,9 +25,9 @@ album = input("Album name: ")
 artist = make_caps(artist)
 album = make_caps(album)
 
-path = "\Test Album" # For testing only EDIT THIS TO WORK ON YOUR MACHINE
+#path = "\Test Album" # For testing only EDIT THIS TO WORK ON YOUR MACHINE
 
-#path = "D:\Music\\" + artist + "\\" + album   # Actual Path
+path = path + "\\" + artist + "\\" + album   # Actual Path
 
 #List all the songs in the album
 songs = os.listdir(path)
@@ -50,4 +51,5 @@ for song in songs:
         print("++++++++++++")
         
         os.rename(old_name, new_name)
-
+    
+print("Completed!")
