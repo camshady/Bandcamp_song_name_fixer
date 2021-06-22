@@ -39,7 +39,7 @@ for song in songs:
     
     #Only look at songs, not cover art. 
     if "-" in words: 
-        stop = words.index("-") + words.count("-") + 1
+        stop = words.index("-") + words.count("-")
         new = words[stop:len(words)]
         new = ' '.join(new)
         

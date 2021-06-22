@@ -11,3 +11,7 @@ It has either renamed all the files or they were not following the correct forma
 
 The correct format is (eg for mp3): Artist - Album - 01 Song.mp3
 
+
+
+MAKE SURE NOT TO HAVE ANY MUSIC PLAYER OPEN WHILE USING, OR IT WILL NOT WORK. 
+
