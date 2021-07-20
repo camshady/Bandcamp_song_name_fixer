@@ -35,21 +35,18 @@ songs = os.listdir(path)
 #Turn file names into song names
 for song in songs:
     old = song;
-    words = old.split()
+    words = old.split('- ')
+
+    new = words[len(words)-1]
     
-    #Only look at songs, not cover art. 
-    if "-" in words: 
-        stop = words.index("-") + words.count("-")
-        new = words[stop:len(words)]
-        new = ' '.join(new)
-        
-        old_name = path + "\\" + old
-        new_name = path + "\\" + new
-        
-        print(old_name)
-        print(new_name)
-        print("++++++++++++")
-        
-        os.rename(old_name, new_name)
+    old_name = path + "\\" + old
+    new_name = path + "\\" + new
+    
+    print(old_name)
+    print(new_name)
+    print("++++++++++++")
+    
+    os.rename(old_name, new_name)
     
 print("Completed!")
+input("Press enter to exit")
